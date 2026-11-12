@@ -5,12 +5,12 @@
 
 | Field | Detail |
 |---|---|
-| Pentester Name (Cybersecurity Professional) | `[FULL NAME]` |
-| Program / Batch | `[BATCH, e.g. B082]` – Networkwalks Cybersecurity Internship |
+| Pentester Name (Cybersecurity Professional) | `Rami Abidi` |
+| Program / Batch | `BATCH,B084` – Networkwalks Cybersecurity Internship |
 | Report Date | 11 November 2026 |
 | Modules completed | W2-PM1 (Multiple Kali Tools), W2-PM2 (GHDB), W2-PM4 (theHarvester), W2-PM5 (Zenmap) |
 | Primary target (in scope) | `networkwalks.com` (own-course target) and the tester's own lab network |
-| Authorization | Letter of Authorization `[REFERENCE NO.]` |
+| Authorization | Letter of Authorization  |
 | Classification | Educational / training report |
 
 ---
