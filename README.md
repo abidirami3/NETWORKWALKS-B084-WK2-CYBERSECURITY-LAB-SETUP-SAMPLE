@@ -68,7 +68,7 @@ Reconnaissance is the first phase of any security assessment. This report docume
 ```
 $ whois networkwalks.com
 ```
-![whois](screenshots/pm1-1-whois.png)
+![whois](pm1-1-whois.png)
 
 | Item | Result |
 |---|---|
@@ -87,7 +87,7 @@ $ whois networkwalks.com
 ```
 $ whatweb networkwalks.com
 ```
-![whatweb](screenshots/pm1-2-whatweb.png)
+![whatweb](pm1-2-whatweb.png)
 
 | Item | Result |
 |---|---|
@@ -105,7 +105,7 @@ $ whatweb networkwalks.com
 ```
 $ nslookup networkwalks.com
 ```
-![nslookup](screenshots/pm1-3-nslookup.png)
+![nslookup](pm1-3-nslookup.png)
 
 **Result:** `networkwalks.com` resolves to **192.232.216.135** (non-authoritative answer). The resolver used was the local router (192.168.1.1). Additional queries then timed out (secondary resolver timeouts / IPv6 DNS server unreachable), which did not affect the final answer.
 
@@ -115,7 +115,7 @@ $ nslookup networkwalks.com
 ```
 $ curl -I https://networkwalks.com
 ```
-![curl](screenshots/pm1-4-curl.png)
+![curl](pm1-4-curl.png)
 
 | Header | Value / Meaning |
 |---|---|
@@ -134,7 +134,7 @@ $ curl -I https://networkwalks.com
 ```
 $ wafw00f networkwalks.com
 ```
-![wafw00f](screenshots/pm1-5-wafw00f.png)
+![wafw00f](pm1-5-wafw00f.png)
 
 **Result:** the site is behind **ModSecurity (SpiderLabs)** WAF (wafw00f v2.4.2, 2 requests).
 
@@ -144,7 +144,7 @@ $ wafw00f networkwalks.com
 ```
 $ dnsrecon -d networkwalks.com
 ```
-![dnsrecon](screenshots/pm1-6-dnsrecon.png)
+![dnsrecon](pm1-6-dnsrecon.png)
 
 **Result:** the enumeration **failed with a timeout** error (the DNS servers could not be reached from the lab network within the default 3-second lifetime), so no DNS records were returned in this run.
 
@@ -200,7 +200,7 @@ Dork used for all results: `intitle:index.of "parent directory" mathematics pdf`
 ```
 $ theHarvester -d microsoft.com -l 1000 -b baidu
 ```
-![theHarvester baidu](screenshots/pm4-1-baidu.png)
+![theHarvester baidu](pm4-1-baidu.png)
 
 **Result (theHarvester 4.10.1):** *No IPs, e-mails, people or hosts found.* Baidu returned nothing for this query in this run. The lab guide notes that results vary over time because the underlying sources change their algorithms.
 
@@ -208,7 +208,7 @@ $ theHarvester -d microsoft.com -l 1000 -b baidu
 ```
 $ theHarvester -d microsoft.com -l 50 -b all
 ```
-![theHarvester all](screenshots/pm4-2-all.png)
+![theHarvester all](pm4-2-all.png)
 
 **Result:** many modules aborted with *Missing API key* errors (e.g. bevigil, bitbucket, bufferoverun, BuiltWith, Brave Search, Censys, criminalip, dehashed). Sources that require paid or registered API keys cannot be queried without configuring `/etc/theHarvester/api-keys.yaml`.
 
@@ -231,7 +231,7 @@ $ theHarvester -d microsoft.com -l 50 -b all
 | 6. MAC addresses | `[FILL IN from the Zenmap Nmap Output tab]` |
 | 7. Topology | Saved below (PDF copy available in the submission) |
 
-![Zenmap topology](screenshots/pm5-topology.png)
+![Zenmap topology](pm5-topology.png)
 
 **Analysis:** the topology shows the local host at the centre connected to three live nodes. The addressing (10.0.2.2 / 10.0.2.3 / 10.0.2.15) matches the default layout of a VirtualBox NAT network (virtual gateway, virtual DHCP/DNS service and the VM itself) `[CONFIRM]`. A ping scan is a light discovery technique; it does not probe ports or services, so it only tells us which hosts answer, not what they run.
 
